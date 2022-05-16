@@ -6,4 +6,4 @@ Catálogo de películas y series mostrados en la página principal
 <p>JQuery: <a href="https://jquery.com/">Jquery documentación</a></p>
 
 ## Ayuda
-<a href="https://www.adaweb.es/modelo-vista-controlador-mvc-php/">Refuerzo</a>
+<p>Todo empezó aquí <a href="https://www.adaweb.es/modelo-vista-controlador-mvc-php/">Refuerzo</a>, pero ahora el contenido es totalmente de Rafael Aguilar Muñoz.</p>
