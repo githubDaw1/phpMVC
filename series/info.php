@@ -21,8 +21,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Información extra</title>
   <link href="estilos.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -35,18 +34,17 @@
 
   <div class="cartel">
 
-    <img src="<?php echo $array[7] ?>" alt="Poster de una serie" class="imagen">
+    <img src="<?php echo htmlspecialchars($array[7]); ?>" alt="Poster de una serie" class="imagen">
 
     <aside>
 
-      <h2 class="titulo"><?php echo $array[1] ?></h2>
-      <p class="plataforma"><?php echo $array[6] ?></p>
+      <h2 class="titulo"><?php echo htmlspecialchars($array[1]); ?></h2>
       
-      <p>Fecha de estreno:<?php echo " \t" .$array[2] ?></p>
-      <p>Temporadas:<?php echo " \t\t" .$array[3] ?></p>
-      <p>Puntuación:<?php echo " \t\t" .$array[4] ?></p>
+      <p>Fecha de estreno:<?php echo " \t" .htmlspecialchars($array[2]); ?></p>
+      <p>Temporadas:<?php echo " \t\t" .htmlspecialchars($array[3]); ?></p>
+      <p>Puntuación:<?php echo " \t\t" .htmlspecialchars($array[4]); ?></p>
 
-      <p class="argumento"><?php echo $array[5] ?></p>
+      <p class="argumento"><?php echo htmlspecialchars($array[5]); ?></p>
 
     </aside>
 
@@ -98,13 +96,13 @@
 
   <div class="container my-3">
     <a href="index.php">Volver atrás</a>
-    <a href="gestGenero.php?serie=<?php echo $array ?>&argumento=<?php echo $argumento ?>">Gestionar géneros</a>
-    <a href="editSerie.php?serie=<?php echo $array ?>&argumento=<?php echo $argumento ?>">Editar serie</a>
+    <a href="gestGenero.php?serie='<?php echo htmlspecialchars($array); ?>'&argumento='<?php echo htmlspecialchars($argumento); ?>'">Gestionar géneros</a>
+    <a href="editSerie.php?serie='<?php echo htmlspecialchars($array); ?>'&argumento='<?php echo htmlspecialchars($argumento); ?>'">Editar serie</a>
   </div>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@latest/dist/umd/popper.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/js/bootstrap.min.js" defer></script>
 
 </body>
 

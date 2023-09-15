@@ -21,8 +21,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Página géneros</title>
   <link href="estilos.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -38,7 +37,7 @@
       $array = implode(", ", $array);
     ?>
 
-    <a href="info.php?serie=<?php echo $array ?>&argumento=<?php echo $argumento ?>" class="inicio">
+    <a href="info.php?serie='<?php echo htmlspecialchars($array); ?>'&argumento='<?php echo htmlspecialchars($argumento); ?>'" class="inicio">
       Volver atrás
     </a>
   </div>
@@ -108,9 +107,9 @@
 
   </table>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@latest/dist/umd/popper.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/js/bootstrap.min.js" defer></script>
 
 </body>
 

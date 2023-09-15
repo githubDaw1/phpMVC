@@ -21,8 +21,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Editar serie</title>
   <link href="estilos.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -37,17 +36,17 @@
 
     <fieldset class="mb-3">
       <label for="estreno">Fecha de estreno: </label>
-      <input name="estreno" value="<?php echo $array[2] ?>">
+      <input name="estreno" value="<?php echo htmlspecialchars($array[2]); ?>">
     </fieldset>
 
     <fieldset class="mb-3">
       <label for="temporada">Temporadas: </label>
-      <input name="temporada" value="<?php echo $array[3] ?>">
+      <input name="temporada" value="<?php echo htmlspecialchars($array[3]); ?>">
     </fieldset>
     
     <fieldset class="mb-3">
       <label for="puntua">Puntuación: </label>
-      <input name="puntua" value="<?php echo $array[4] ?>">
+      <input name="puntua" value="<?php echo htmlspecialchars($array[4]); ?>">
     </fieldset>
     
     <fieldset class="mb-3">
@@ -69,7 +68,7 @@
     
     <fieldset class="mb-3">
       <label for="argumento">Argumento: </label><br>
-      <textarea name="argumento" rows="10" cols="50"><?php echo $array[5] ?></textarea>
+      <textarea name="argumento" rows="10" cols="50"><?php echo htmlspecialchars($array[5]); ?></textarea>
     </fieldset>
     
     <fieldset class="mb-3">
@@ -78,9 +77,9 @@
 
   </form>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@latest/dist/umd/popper.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/js/bootstrap.min.js" defer></script>
 
 </body>
 
